@@ -22,5 +22,6 @@ fun Menu(navController: NavController){
             Text(text = "Ejercicio Presupuesto")
         }
 
+
     }
 }

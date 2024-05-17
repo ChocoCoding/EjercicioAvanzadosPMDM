@@ -62,8 +62,10 @@ fun AppLogin(navController: NavController){
                     navController.navigate(Screens.Ejercicio1.route)
                 } else {
                     intentos--
-                    if (intentos == 0) {
-                        
+                    if (intentos <= 0) {
+                        Toast.makeText(context, "Te has quedado sin intentos", Toast.LENGTH_SHORT).show()
+                        navController.navigate(route = Screens.Menu.route)
+
                     }else{
                         Toast.makeText(context, "Intentos restantes: $intentos", Toast.LENGTH_SHORT).show()
                         username = ""
